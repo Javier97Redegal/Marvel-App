@@ -1,5 +1,7 @@
 import FavoritesList from '@/components/FavoritesList'
 
-const Home = () => (<FavoritesList />)
+const FavoritesPage = () => <>
+    <FavoritesList />
+</>
 
-export default Home
+export default FavoritesPage

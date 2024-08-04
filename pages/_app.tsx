@@ -1,14 +1,14 @@
 
 import { AppProps } from 'next/app'
 import { FavoritesProvider } from '@/context/FavoritesContext'
-import Header from '@/components/Header'
+import Header from '@/layout/Header'
 
 
-const MyApp = ({ Component, pageProps }: AppProps) => (
+const App = ({ Component, pageProps }: AppProps) => <>
     <FavoritesProvider>
         <Header />
         <Component {...pageProps} />
     </FavoritesProvider>
-)
+</>
 
-export default MyApp
+export default App
