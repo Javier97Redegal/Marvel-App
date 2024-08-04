@@ -1,11 +1,17 @@
-import { useApp } from "@/context/AppContext"
-import CharacterList from "@/components/CharacterList"
+import { useSearch } from '@/context/SearchContext'
+import CharacterList from '@/components/CharacterList'
+import SearchBar from '@/components/SearchBar'
+import { TYPES_OF_CHARACTER_LIST } from '@/constants'
 
 const Home = () => {
-    const { characters } = useApp()
+    const { characters, isLoading } = useSearch()
 
     return <>
-        <CharacterList list={characters} />
+        <SearchBar type={TYPES_OF_CHARACTER_LIST.TOTAL} />
+        <CharacterList
+            isLoading={isLoading}
+            list={characters}
+        />
     </>
 }
 

@@ -18,7 +18,7 @@ interface Data {
 
 export interface GetCharactersResultType {
     id: number;
-    name: string | undefined;
+    name: string;
     description?: string;
     modified?: string;
     thumbnail: Thumbnail;

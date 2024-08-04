@@ -12,8 +12,8 @@ const CharacterCard: FC<GetCharactersResultType> = (props) => {
             extension,
         }
     } = props
-    const { favoriteIds, addFavorite, removeFavorite } = useFavorites()
-    const isFavorite = favoriteIds.includes(id)
+    const { favoritesIds, addFavorite, removeFavorite } = useFavorites()
+    const isFavorite = favoritesIds.includes(id)
 
     const handleFavoriteClick = () => {
         if (isFavorite) {
@@ -22,8 +22,6 @@ const CharacterCard: FC<GetCharactersResultType> = (props) => {
             addFavorite(props)
         }
     }
-
-    if (name === undefined) return <>Loading...</>
 
     return <>
         <img src={`${path}.${extension}`} alt={name} />

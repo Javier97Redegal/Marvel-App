@@ -1,17 +1,17 @@
 
 import { AppProps } from 'next/app'
 import { FavoritesProvider } from '@/context/FavoritesContext'
-import { AppProvider } from '@/context/AppContext'
+import { SearchProvider } from '@/context/SearchContext'
 import Header from '@/layout/Header'
 
 
 const App = ({ Component, pageProps }: AppProps) => <>
-    <AppProvider>
+    <SearchProvider>
         <FavoritesProvider>
             <Header />
             <Component {...pageProps} />
         </FavoritesProvider>
-    </AppProvider>
+    </SearchProvider>
 </>
 
 export default App
