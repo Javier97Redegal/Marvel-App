@@ -1,7 +1,12 @@
-import FavoritesList from '@/components/FavoritesList'
+import { useFavorites } from '@/context/FavoritesContext'
+import CharacterList from '@/components/CharacterList'
 
-const FavoritesPage = () => <>
-    <FavoritesList />
-</>
+const FavoritesPage = () => {
+    const { favorites } = useFavorites()
+
+    return <>
+        <CharacterList list={favorites} />
+    </>
+}
 
 export default FavoritesPage

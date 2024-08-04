@@ -1,8 +1,8 @@
-type GetMarvelAPIProps = {
+export interface GetMarvelAPIProps {
     params?: any
 }
 
-type GetCharacterMarvelAPIProps = {
+export interface GetCharacterMarvelAPIProps {
     id: number
     params?: any
 }
