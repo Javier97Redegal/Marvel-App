@@ -38,9 +38,9 @@ export interface GetComicsFromCharacterResultType {
     variants?: Series[];
     collections?: any[];
     collectedIssues?: any[];
-    dates?: DateElement[];
+    dates: DateElement[];
     prices?: Price[];
-    thumbnail?: Thumbnail;
+    thumbnail: Thumbnail;
     images?: Thumbnail[];
     creators?: Creators;
     characters?: Characters;

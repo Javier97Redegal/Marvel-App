@@ -1,0 +1,61 @@
+.card {
+    position: relative;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+}
+
+.card::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid white;
+	border-left: 30px solid transparent;
+}
+
+.image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    gap: .5rem;
+    padding: 2.5rem 1.5rem;
+    background: black;
+    border-top: 10px solid red;
+}
+
+.title a {
+    font-size: 1.325rem;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.title button {
+    display: block;
+    width: 30px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    flex: 0 0 auto;
+}
+
+.title button img {
+    display: block;
+    width: 100%;
+}

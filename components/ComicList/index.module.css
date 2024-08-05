@@ -1,0 +1,25 @@
+.comics {
+    max-width: 1980px;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.comics ul {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+    overflow-x: scroll;
+}
+
+.comics ul li {
+    width: 20%;
+    max-width: 250px;
+    flex: 0 0 auto;
+}
+
+.header {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}

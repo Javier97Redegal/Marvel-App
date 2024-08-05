@@ -4,9 +4,10 @@ import { useSearch } from '@/context/SearchContext'
 import { useFavorites } from '@/context/FavoritesContext'
 import { INPUT_PLACEHOLDER } from './constants'
 import { TYPES_OF_CHARACTER_LIST } from '@/constants'
+import styles from './index.module.css'
 import { SearchBarProps } from './types'
 
-const SearchBar = ({ type }: SearchBarProps) => {
+const SearchBar = ({ type, results }: SearchBarProps) => {
     const { searchTotal } = useSearch()
     const { searchFavorites } = useFavorites()
     const router = useRouter()
@@ -14,8 +15,8 @@ const SearchBar = ({ type }: SearchBarProps) => {
     const searchQuery = searchParams.get('q') || ''
 
     const sendInput = (type: TYPES_OF_CHARACTER_LIST) => {
-        switch (true) {
-            case type === TYPES_OF_CHARACTER_LIST.FAVORITES:
+        switch (type) {
+            case TYPES_OF_CHARACTER_LIST.FAVORITES:
                 searchFavorites(searchQuery)
 
                 break
@@ -45,14 +46,18 @@ const SearchBar = ({ type }: SearchBarProps) => {
         return () => clearTimeout(delayInputTimeoutId)
     }, [searchQuery, 500])
 
-    return <>
-        <input
-            type='text'
-            value={searchQuery}
-            placeholder={INPUT_PLACEHOLDER}
-            onChange={handleInputChange}
-        />
-    </>
+    return <div className={styles.searchbar}>
+        <div className={styles.input}>
+            <img src={'/glass-icon.png'} />
+            <input
+                type='text'
+                value={searchQuery}
+                placeholder={INPUT_PLACEHOLDER}
+                onChange={handleInputChange}
+            />
+        </div>
+        <small>{results} Result{results === 0 ? '' : 's'}</small>
+    </div>
 }
 
 export default SearchBar

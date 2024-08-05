@@ -32,8 +32,7 @@ export const SearchProvider = ({ children }: { children: ReactNode }) => {
             if (!defaultCharacters.length) {
                 const defaultSearch = await getCharacters({
                     params: {
-                        limit: DEFAULT_SEARCH_LIMIT,
-                        ...(!!search && { nameStartsWith: search.toLowerCase() })
+                        limit: DEFAULT_SEARCH_LIMIT
                     },
                 })
 

@@ -1,0 +1,12 @@
+::root {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Roboto Condensed';
+    margin: 0;
+
+    * {
+        box-sizing: border-box;
+    }
+}

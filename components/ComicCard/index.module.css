@@ -1,0 +1,20 @@
+.card {
+    width: 100%;
+}
+
+.image {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    background-size: cover;
+    background-position: center;
+}
+
+.name {
+    margin: 1rem 0;
+    font-weight: bold;
+    font-size: 1.225rem;
+}
+
+.date {
+    font-size: .925rem;
+}

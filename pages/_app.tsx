@@ -1,17 +1,22 @@
 
 import { AppProps } from 'next/app'
-import { FavoritesProvider } from '@/context/FavoritesContext'
+import { AppProvider } from '@/context/AppContext'
 import { SearchProvider } from '@/context/SearchContext'
-import Header from '@/layout/Header'
+import { FavoritesProvider } from '@/context/FavoritesContext'
+import Navbar from '@/layout/Navbar'
+import '@fontsource/roboto-condensed';
+import './globals.css'
 
 
 const App = ({ Component, pageProps }: AppProps) => <>
-    <SearchProvider>
-        <FavoritesProvider>
-            <Header />
-            <Component {...pageProps} />
-        </FavoritesProvider>
-    </SearchProvider>
+    <AppProvider>
+        <SearchProvider>
+            <FavoritesProvider>
+                <Navbar />
+                <Component {...pageProps} />
+            </FavoritesProvider>
+        </SearchProvider>
+    </AppProvider>
 </>
 
 export default App

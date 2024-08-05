@@ -1,1 +1,1 @@
-export const INPUT_PLACEHOLDER = 'Write something!'
+export const INPUT_PLACEHOLDER = 'Search a character'
