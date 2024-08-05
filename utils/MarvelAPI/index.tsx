@@ -15,7 +15,7 @@ export const getCharacters = async ({ params }: GetMarvelAPIProps): Promise<GetC
         ts: timeStamp,
         hash: Md5.hashStr(timeStamp + privateKey + publicKey),
         ...params
-    }).toString()}`)
+    })}`)
 
     return response.json()
 }
@@ -28,7 +28,7 @@ export const getCharacter = async ({ id, params }: GetCharacterMarvelAPIProps): 
         ts: timeStamp,
         hash: Md5.hashStr(timeStamp + privateKey + publicKey),
         ...params
-    }).toString()}`)
+    })}`)
 
     return response.json()
 }
@@ -41,7 +41,7 @@ export const getComicsFromCharacter = async ({ id, params }: GetCharacterMarvelA
         ts: timeStamp,
         hash: Md5.hashStr(timeStamp + privateKey + publicKey),
         ...params
-    }).toString()}`)
+    })}`)
 
     return response.json()
 }

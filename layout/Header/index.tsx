@@ -6,8 +6,12 @@ const Header = () => {
     const { favoritesIds } = useFavorites()
     return <>
         <header>
-            <Link href="/">Marvel</Link>
-            <Link href="/favorites">Favorites ({favoritesIds.length})</Link>
+            <Link href={{
+                pathname: '/'
+            }}>Marvel</Link>
+            <Link href={{
+                pathname: '/favorites'
+            }}>Favorites ({favoritesIds.length})</Link>
         </header>
     </>
 }

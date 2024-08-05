@@ -25,7 +25,9 @@ const CharacterCard: FC<GetCharactersResultType> = (props) => {
 
     return <>
         <img src={`${path}.${extension}`} alt={name} />
-        <h3><Link href={`/character/${id}`}>{name}</Link></h3>
+        <h3><Link href={{
+            pathname: `/character/${id}`
+        }}>{name}</Link></h3>
         <button onClick={handleFavoriteClick}>
             {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
         </button>
