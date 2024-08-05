@@ -7,15 +7,15 @@ const CharacterList = ({
 }: CharacterListProps) => {
     if (isLoading) return <p>Loading...</p>
 
-    return !list.length ?
-        <p>No results</p> :
+    return !!list.length ?
         <ul>
             {list.map((character, key) => (
                 <li key={key}>
                     <CharacterCard {...character} />
                 </li>
             ))}
-        </ul>
+        </ul> :
+        <p>No results</p>
 }
 
 export default CharacterList

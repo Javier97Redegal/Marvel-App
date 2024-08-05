@@ -3,6 +3,6 @@ export interface GetMarvelAPIProps {
 }
 
 export interface GetCharacterMarvelAPIProps {
-    id: number
+    id: string
     params?: any
 }
