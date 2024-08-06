@@ -19,6 +19,13 @@
 	border-left: 30px solid transparent;
 }
 
+@media (max-width: 1280px) {
+    .card::after {
+        border-bottom: 20px solid white;
+        border-left: 20px solid transparent;
+    }
+}
+
 .image {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -35,6 +42,13 @@
     padding: 2.5rem 1.5rem;
     background: black;
     border-top: 10px solid red;
+
+    @media (max-width: 1280px) {
+        padding: 1.225rem 1rem;
+        height: 80px;
+        gap: .25rem;        
+        border-top: 6px solid red;
+    }
 }
 
 .title a {
@@ -43,6 +57,11 @@
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 1px;
+
+    @media (max-width: 1280px) {
+        font-size: .925rem;
+        line-height: 1rem;        
+    }
 }
 
 .title button {
@@ -53,6 +72,10 @@
     border-radius: 0;
     cursor: pointer;
     flex: 0 0 auto;
+
+    @media (max-width: 1280px) {
+        width: 20px;      
+    }
 }
 
 .title button img {

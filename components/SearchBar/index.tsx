@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { INPUT_PLACEHOLDER } from './constants'
 import styles from './index.module.css'
 import { SearchBarProps } from './types'
+import { INPUT_PLACEHOLDER } from './constants'
 
 const SearchBar = ({
     mode,
@@ -28,11 +28,11 @@ const SearchBar = ({
         }, 500)
 
         return () => clearTimeout(delayInputTimeoutId)
-    }, [inputValue, 500])
+    }, [inputValue, mode, router])
 
     return <div className={styles.searchbar}>
         <div className={styles.input}>
-            <img src={'/glass-icon.png'} />
+            <img src={'/glass-icon.png'} alt='Glass icon' />
             <input
                 type='text'
                 value={inputValue}

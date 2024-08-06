@@ -10,6 +10,10 @@
     padding: 2rem;
     background: black;
     border-bottom: 2px solid darkgray;
+
+    @media (max-width: 1280px) {
+        padding: 1.5rem;      
+    }
 }
 
 .logo {
@@ -19,6 +23,10 @@
 .logo img {
     display: block;
     width: 125px;
+
+    @media (max-width: 1280px) {
+        width: 80px;        
+    }
 }
 
 .favorites {
@@ -28,8 +36,16 @@
     font-size: 1.325rem;
     text-decoration: none;
     color: white;
+
+    @media (max-width: 1280px) {
+        font-size: 1rem;        
+    }
 }
 
 .favorites img {
     width: 30px;
+
+    @media (max-width: 1280px) {
+        width: 24px;  
+    }
 }

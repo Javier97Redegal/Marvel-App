@@ -13,19 +13,20 @@ const CharacterList = ({
     mode,
     query,
 }: CharacterListProps) => {
+    const fetchCharacters = async () => await getCharacters({ params: { limit: DEFAULT_SEARCH_LIMIT, ...(!!query && { nameStartsWith: query.toLowerCase() }) } })
+    const isFavorites = mode === TYPES_OF_CHARACTER_LIST.FAVORITES
     const { favorites } = useApp()
+    const { data, status } = useQuery({ queryKey: `search-${!query ? 'total' : query}`, queryFn: fetchCharacters, enabled: !isFavorites })
 
     let characters: GetCharactersResultType[] = []
 
     switch (mode) {
         case TYPES_OF_CHARACTER_LIST.FAVORITES:
-            characters = favorites
+            characters = !query ? favorites : favorites.filter(({ name }) => name.toLowerCase().search(query.toLocaleLowerCase()) !== -1)
 
             break;
 
         default:
-            const fetchCharacters = async () => await getCharacters({ params: { limit: DEFAULT_SEARCH_LIMIT, ...(!!query && { nameStartsWith: query.toLowerCase() }) } })
-            const { data, status } = useQuery(`search-${!query ? 'total' : query}`, fetchCharacters)
 
             if (status !== 'success') return <LoadingPanel type={status} />
 
@@ -35,6 +36,7 @@ const CharacterList = ({
     }
 
     return <>
+        <div>{!query}</div>
         <div className={styles.totals}>{characters.length} {getResultsMessage(characters.length)}</div>
         {mode === TYPES_OF_CHARACTER_LIST.FAVORITES && <h2 className={styles.header}>Favorites</h2>}
         {!!characters.length ?

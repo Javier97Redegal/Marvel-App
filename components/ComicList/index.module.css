@@ -2,6 +2,10 @@
     max-width: 1980px;
     padding: 2rem;
     margin: 0 auto;
+
+    @media (max-width: 1280px) {
+        padding: 1.5rem;       
+    }
 }
 
 .comics ul {
@@ -16,10 +20,18 @@
     width: 20%;
     max-width: 250px;
     flex: 0 0 auto;
+
+    @media (max-width: 1280px) {
+        width: 40%;       
+    }
 }
 
 .header {
     font-size: 2rem;
     font-weight: 700;
     text-transform: uppercase;
+
+    @media (max-width: 1280px) {
+        font-size: 1.5rem;        
+    }
 }
