@@ -1,3 +1,3 @@
 export interface CharacterHeaderProps {
-    id: string
+    id: number
 }

@@ -1,3 +1,3 @@
 export interface ComicListProps {
-    id: string
+    id: number
 }

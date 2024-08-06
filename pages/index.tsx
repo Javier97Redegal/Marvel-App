@@ -1,36 +1,17 @@
-import { useApp } from '@/context/AppContext'
-import { useSearch } from '@/context/SearchContext'
-import { useFavorites } from '@/context/FavoritesContext'
+import { useSearchParams } from 'next/navigation'
 import CharacterList from '@/components/CharacterList'
 import SearchBar from '@/components/SearchBar'
 import { TYPES_OF_CHARACTER_LIST } from '@/constants'
-import styles from './index.module.css'
 
 const Home = () => {
-    const { appMode } = useApp()
-    const { characters, isLoading } = useSearch()
-    const { favorites } = useFavorites()
+    const searchParams = useSearchParams()
+    const searchMode = searchParams.get('mode') || TYPES_OF_CHARACTER_LIST.TOTAL
+    const searchQuery = searchParams.get('q') || ''
 
-    switch (appMode) {
-        case TYPES_OF_CHARACTER_LIST.FAVORITES:
-            return <>
-                <h2 className={styles.header}>Favorites</h2>
-                <SearchBar type={appMode} results={favorites.length} />
-                <CharacterList
-                    isLoading={false}
-                    list={favorites}
-                />
-            </>
-
-        default:
-            return <>
-                <SearchBar type={appMode} results={characters.length} />
-                <CharacterList
-                    isLoading={isLoading}
-                    list={characters}
-                />
-            </>
-    }
+    return <>
+        <SearchBar mode={searchMode} query={searchQuery} />
+        <CharacterList mode={searchMode} query={searchQuery} />
+    </>
 }
 
 export default Home

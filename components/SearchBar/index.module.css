@@ -4,13 +4,6 @@
     padding: 3rem 2rem 0 2rem;
 }
 
-.searchbar small {
-    display: block;
-    text-transform: uppercase;
-    font-size: 1.225rem;
-    margin: 1rem 0 0 0;
-}
-
 .input {
     display: flex;
     gap: .5rem;

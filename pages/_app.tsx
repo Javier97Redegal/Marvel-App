@@ -1,22 +1,19 @@
-
 import { AppProps } from 'next/app'
+import { QueryClient, QueryClientProvider } from 'react-query'
 import { AppProvider } from '@/context/AppContext'
-import { SearchProvider } from '@/context/SearchContext'
-import { FavoritesProvider } from '@/context/FavoritesContext'
 import Navbar from '@/layout/Navbar'
 import '@fontsource/roboto-condensed';
 import './globals.css'
 
+const queryClient = new QueryClient()
 
 const App = ({ Component, pageProps }: AppProps) => <>
-    <AppProvider>
-        <SearchProvider>
-            <FavoritesProvider>
-                <Navbar />
-                <Component {...pageProps} />
-            </FavoritesProvider>
-        </SearchProvider>
-    </AppProvider>
+    <QueryClientProvider client={queryClient}>
+        <AppProvider>
+            <Navbar />
+            <Component {...pageProps} />
+        </AppProvider>
+    </QueryClientProvider>
 </>
 
 export default App

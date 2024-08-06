@@ -4,9 +4,13 @@ import CharacterHeader from '@/components/CharacterHeader'
 
 const CharacterView = ({
     id
-}: CharacterViewProps) => <>
-        <CharacterHeader id={id}></CharacterHeader>
-        <ComicList id={id}></ComicList>
+}: CharacterViewProps) => {
+    const idAsNumber = Number(id)
+
+    return <>
+        <CharacterHeader id={idAsNumber}></CharacterHeader>
+        <ComicList id={idAsNumber}></ComicList>
     </>
+}
 
 export default CharacterView

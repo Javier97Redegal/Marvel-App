@@ -9,6 +9,7 @@
     width: 100%;
     padding: 2rem;
     background: black;
+    border-bottom: 2px solid darkgray;
 }
 
 .logo {
