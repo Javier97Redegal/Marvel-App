@@ -36,7 +36,6 @@ const CharacterList = ({
     }
 
     return <>
-        <div>{!query}</div>
         <div className={styles.totals}>{characters.length} {getResultsMessage(characters.length)}</div>
         {mode === TYPES_OF_CHARACTER_LIST.FAVORITES && <h2 className={styles.header}>Favorites</h2>}
         {!!characters.length ?

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar test renders the navbar with the correct elements 1`] = `
+<DocumentFragment>
+  <nav
+    class="header"
+  >
+    <a
+      title="Go to start"
+    >
+      <img
+        alt="Marvel Logo"
+        src="/marvel-logo.png"
+      />
+    </a>
+    <a
+      title="Go to favorites"
+    >
+      <img
+        alt="Favorites"
+        src="/heart-default.png"
+      />
+       2
+    </a>
+  </nav>
+</DocumentFragment>
+`;

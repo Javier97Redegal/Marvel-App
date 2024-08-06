@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterHeader tests renders character details when data is loaded 1`] = `
+<DocumentFragment>
+  <header
+    class="header"
+  >
+    <div
+      class="inner"
+    >
+      <div
+        class="image"
+        style="background-image: url(path/to/spiderman.jpg);"
+      />
+      <div
+        class="body"
+      >
+        <h1>
+          Spider-Man
+          <button>
+            <img
+              alt="Add to Favorites"
+              src="/heart-alt.png"
+              title="Add to Favorites"
+            />
+          </button>
+        </h1>
+        <p>
+          Friendly neighborhood Spider-Man.
+        </p>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;
+
+exports[`CharacterHeader tests renders loading panel when error 1`] = `
+<DocumentFragment>
+  <div>
+    LoadingPanel Mock: error
+  </div>
+</DocumentFragment>
+`;
+
+exports[`CharacterHeader tests renders loading panel when loading 1`] = `
+<DocumentFragment>
+  <div>
+    LoadingPanel Mock: loading
+  </div>
+</DocumentFragment>
+`;

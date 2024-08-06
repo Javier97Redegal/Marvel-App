@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingPanel tests displays the correct loading message 1`] = `
+<DocumentFragment>
+  <div
+    class="loader"
+  >
+    Loading...
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComicList tests renders list of comics when data is loaded 1`] = `
+<DocumentFragment>
+  <div
+    class="comics"
+  >
+    <h2
+      class="header"
+    >
+      Comics
+    </h2>
+    <ul>
+      <li>
+        <div>
+          Comic 1
+        </div>
+      </li>
+      <li>
+        <div>
+          Comic 2
+        </div>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ComicList tests renders loading panel when error 1`] = `
+<DocumentFragment>
+  <div>
+    LoadingPanel Mock: error
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ComicList tests renders loading panel when loading 1`] = `
+<DocumentFragment>
+  <div>
+    LoadingPanel Mock: loading
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ComicList tests renders loading panel when there are no comics 1`] = `
+<DocumentFragment>
+  <div
+    class="comics"
+  >
+    <h2
+      class="header"
+    >
+      Comics
+    </h2>
+    <div>
+      LoadingPanel Mock: success
+    </div>
+  </div>
+</DocumentFragment>
+`;

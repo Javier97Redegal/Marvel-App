@@ -9,3 +9,7 @@
         font-size: 1.5rem;        
     }
 }
+
+.loader + .loader {
+    display: none;
+}

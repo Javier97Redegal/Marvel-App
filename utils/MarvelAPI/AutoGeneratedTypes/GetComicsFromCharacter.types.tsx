@@ -1,18 +1,18 @@
 export interface GetComicsFromCharacterType {
-    code: number;
-    status: string;
-    copyright: string;
-    attributionText: string;
-    attributionHTML: string;
-    etag: string;
+    code?: number;
+    status?: string;
+    copyright?: string;
+    attributionText?: string;
+    attributionHTML?: string;
+    etag?: string;
     data: Data;
 }
 
 interface Data {
-    offset: number;
-    limit: number;
-    total: number;
-    count: number;
+    offset?: number;
+    limit?: number;
+    total?: number;
+    count?: number;
     results: GetComicsFromCharacterResultType[];
 }
 

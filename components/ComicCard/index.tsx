@@ -12,11 +12,13 @@ const ComicCard: FC<GetComicsFromCharacterResultType> = (props) => {
         dates
     } = props
 
-    return <div className={styles.card}>
-        <div className={styles.image} style={{ backgroundImage: `url(${path}.${extension})` }}></div>
-        <div className={styles.name}>{title}</div>
-        <div className={styles.date}>{dates[0].date.split('-')[0]}</div>
-    </div>
+    return <>
+        <div className={styles.card}>
+            <div className={styles.image} style={{ backgroundImage: `url(${path}.${extension})` }}></div>
+            <div className={styles.name}>{title}</div>
+            <div className={styles.date}>{dates[0].date.split('-')[0]}</div>
+        </div>
+    </>
 }
 
 export default ComicCard

@@ -16,19 +16,21 @@ const ComicList = ({
 
     const comics = data.data.results
 
-    return <div className={styles.comics}>
-        <h2 className={styles.header}>Comics</h2>
-        {!!comics.length ?
-            <ul>
-                {comics.map(comic => (
-                    <li key={comic.id}>
-                        <ComicCard {...comic}></ComicCard>
-                    </li>
-                ))}
-            </ul> :
-            <LoadingPanel type='success' />
-        }
-    </div>
+    return <>
+        <div className={styles.comics}>
+            <h2 className={styles.header}>Comics</h2>
+            {!!comics.length ?
+                <ul>
+                    {comics.map(comic => (
+                        <li key={comic.id}>
+                            <ComicCard {...comic}></ComicCard>
+                        </li>
+                    ))}
+                </ul> :
+                <LoadingPanel type='success' />
+            }
+        </div>
+    </>
 }
 
 export default ComicList

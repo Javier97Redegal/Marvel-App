@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComicCard tests displays the correct date 1`] = `
+<DocumentFragment>
+  <div
+    class="card"
+  >
+    <div
+      class="image"
+      style="background-image: url(http://example.com/image.jpg);"
+    />
+    <div
+      class="name"
+    >
+      Mock Comic
+    </div>
+    <div
+      class="date"
+    >
+      2023
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ComicCard tests displays the correct image 1`] = `
+<DocumentFragment>
+  <div
+    class="card"
+  >
+    <div
+      class="image"
+      style="background-image: url(http://example.com/image.jpg);"
+    />
+    <div
+      class="name"
+    >
+      Mock Comic
+    </div>
+    <div
+      class="date"
+    >
+      2023
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ComicCard tests displays the correct title 1`] = `
+<DocumentFragment>
+  <div
+    class="card"
+  >
+    <div
+      class="image"
+      style="background-image: url(http://example.com/image.jpg);"
+    />
+    <div
+      class="name"
+    >
+      Mock Comic
+    </div>
+    <div
+      class="date"
+    >
+      2023
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar renders search bar with initial state 1`] = `
+<DocumentFragment>
+  <div
+    class="searchbar"
+  >
+    <div
+      class="input"
+    >
+      <img
+        alt="Glass icon"
+        src="/glass-icon.png"
+      />
+      <input
+        placeholder="Search a character"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

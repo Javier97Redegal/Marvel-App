@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterList test renders character cards when data is loaded 1`] = `
+<DocumentFragment>
+  <div
+    class="totals"
+  >
+    2 Results
+  </div>
+  <ul
+    class="list"
+  >
+    <li>
+      <div>
+        CharacterCard Mock 1
+      </div>
+    </li>
+    <li>
+      <div>
+        CharacterCard Mock 2
+      </div>
+    </li>
+  </ul>
+</DocumentFragment>
+`;
+
+exports[`CharacterList test renders loading panel when error 1`] = `
+<DocumentFragment>
+  <div>
+    LoadingPanel Mock: error
+  </div>
+</DocumentFragment>
+`;
+
+exports[`CharacterList test renders loading panel when loading 1`] = `
+<DocumentFragment>
+  <div>
+    LoadingPanel Mock: loading
+  </div>
+</DocumentFragment>
+`;

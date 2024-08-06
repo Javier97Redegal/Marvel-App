@@ -26,7 +26,7 @@ export const useApp = () => {
     const context = useContext(AppContext)
 
     if (!context) {
-        throw new Error('useFavorites must be used within a FavoritesProvider')
+        throw new Error('useApp must be used within a AppProvider')
     }
 
     return context

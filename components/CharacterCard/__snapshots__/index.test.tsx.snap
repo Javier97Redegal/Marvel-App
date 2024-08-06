@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterCard test renders character details correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="card"
+  >
+    <div
+      class="image"
+      style="background-image: url(path/to/spiderman.jpg);"
+    />
+    <div
+      class="title"
+    >
+      <a
+        href="[object Object]"
+      >
+        Spider-Man
+      </a>
+      <button>
+        <img
+          alt="Remove from Favorites"
+          src="/heart-default.png"
+          title="Remove from Favorites"
+        />
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

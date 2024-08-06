@@ -17,15 +17,17 @@ const CharacterCard: FC<GetCharactersResultType> = (props) => {
     const { favorites, addFavorite, removeFavorite } = useApp()
     const isFavorite = favorites.map(favorite => favorite.id).includes(id)
 
-    return <div className={styles.card}>
-        <div className={styles.image} style={{ backgroundImage: `url(${path}.${extension})` }}></div>
-        <div className={styles.title}>
-            <Link href={{ pathname: `/character/${id}` }}>{name}</Link>
-            <button onClick={() => handleFavoriteButton({ character: props, isFavorite, addFavorite, removeFavorite })}>
-                {isFavorite ? <img src={'/heart-default.png'} alt='Remove from Favorites' title='Remove from Favorites' /> : <img src={'/heart-alt.png'} alt='Add to Favorites' title='Add to Favorites' />}
-            </button>
+    return <>
+        <div className={styles.card}>
+            <div className={styles.image} style={{ backgroundImage: `url(${path}.${extension})` }}></div>
+            <div className={styles.title}>
+                <Link href={{ pathname: `/character/${id}` }}>{name}</Link>
+                <button onClick={() => handleFavoriteButton({ character: props, isFavorite, addFavorite, removeFavorite })}>
+                    {isFavorite ? <img src={'/heart-default.png'} alt='Remove from Favorites' title='Remove from Favorites' /> : <img src={'/heart-alt.png'} alt='Add to Favorites' title='Add to Favorites' />}
+                </button>
+            </div>
         </div>
-    </div>
+    </>
 }
 
 export default CharacterCard

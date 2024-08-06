@@ -1,19 +1,21 @@
 import { AppProps } from 'next/app'
-import { QueryClient, QueryClientProvider } from 'react-query'
+import Head from 'next/head'
 import { AppProvider } from '@/context/AppContext'
+import UseQueryWrapper from '@/layout/UseQueryWrapper'
 import Navbar from '@/layout/Navbar'
-import '@fontsource/roboto-condensed';
+import '@fontsource/roboto-condensed'
 import './globals.css'
 
-const queryClient = new QueryClient()
-
 const App = ({ Component, pageProps }: AppProps) => <>
-    <QueryClientProvider client={queryClient}>
-        <AppProvider>
+    <AppProvider>
+        <UseQueryWrapper>
+            <Head>
+                <title>Marvel App</title>
+            </Head>
             <Navbar />
             <Component {...pageProps} />
-        </AppProvider>
-    </QueryClientProvider>
+        </UseQueryWrapper>
+    </AppProvider>
 </>
 
 export default App

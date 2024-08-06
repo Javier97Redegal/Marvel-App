@@ -30,17 +30,19 @@ const SearchBar = ({
         return () => clearTimeout(delayInputTimeoutId)
     }, [inputValue, mode, router])
 
-    return <div className={styles.searchbar}>
-        <div className={styles.input}>
-            <img src={'/glass-icon.png'} alt='Glass icon' />
-            <input
-                type='text'
-                value={inputValue}
-                placeholder={INPUT_PLACEHOLDER}
-                onChange={handleInputChange}
-            />
+    return <>
+        <div className={styles.searchbar}>
+            <div className={styles.input}>
+                <img src={'/glass-icon.png'} alt='Glass icon' />
+                <input
+                    type='text'
+                    value={inputValue}
+                    placeholder={INPUT_PLACEHOLDER}
+                    onChange={handleInputChange}
+                />
+            </div>
         </div>
-    </div>
+    </>
 }
 
 export default SearchBar

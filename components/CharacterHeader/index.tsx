@@ -18,20 +18,22 @@ const CharacterHeader = ({
 
     const character = data.data.results[0]
 
-    return <header className={styles.header}>
-        <div className={styles.inner}>
-            <div className={styles.image} style={{ backgroundImage: `url(${character.thumbnail.path}.${character.thumbnail.extension})` }}></div>
-            <div className={styles.body}>
-                <h1>
-                    {character.name}
-                    <button onClick={() => handleFavoriteButton({ character, isFavorite, addFavorite, removeFavorite })}>
-                        {isFavorite ? <img src={'/heart-default.png'} alt='Remove from Favorites' title='Remove from Favorites' /> : <img src={'/heart-alt.png'} alt='Add to Favorites' title='Add to Favorites' />}
-                    </button>
-                </h1>
-                <p>{character.description}</p>
+    return <>
+        <header className={styles.header}>
+            <div className={styles.inner}>
+                <div className={styles.image} style={{ backgroundImage: `url(${character.thumbnail.path}.${character.thumbnail.extension})` }}></div>
+                <div className={styles.body}>
+                    <h1>
+                        {character.name}
+                        <button onClick={() => handleFavoriteButton({ character, isFavorite, addFavorite, removeFavorite })}>
+                            {isFavorite ? <img src={'/heart-default.png'} alt='Remove from Favorites' title='Remove from Favorites' /> : <img src={'/heart-alt.png'} alt='Add to Favorites' title='Add to Favorites' />}
+                        </button>
+                    </h1>
+                    <p>{character.description}</p>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
+    </>
 }
 
 export default CharacterHeader
