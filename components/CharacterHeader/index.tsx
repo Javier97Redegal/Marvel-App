@@ -1,3 +1,5 @@
+'use client'
+
 import { useQuery } from 'react-query'
 import { getCharacter } from '@/utils/MarvelAPI'
 import { handleFavoriteButton } from '@/helpers'

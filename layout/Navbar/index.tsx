@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import { useApp } from '@/context/AppContext'
 import { TYPES_OF_CHARACTER_LIST } from '@/constants'

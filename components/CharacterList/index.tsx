@@ -1,3 +1,5 @@
+'use client'
+
 import { useQuery } from 'react-query'
 import { useApp } from '@/context/AppContext'
 import { getCharacters } from '@/utils/MarvelAPI'

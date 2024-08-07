@@ -6,9 +6,9 @@ The stack is simple:
 * **React 18** for the *FE*
 * **Node 18 (LTS)** for running the app
 
-Above that I added 2 libraries since the requirements *only* prohibited the use of component libraries: `ts-md5`, for hashing the *API Keys* when using the *API*; and `react-query` for managing the *API* calls and it's cache.
+Above that I added 2 libraries since the requirements *only* prohibited the use of component libraries: `ts-md5`, for hashing the *API Keys* when using the *API*; and `react-query` for managing the *API* calls, it's state and it's cache.
 
-I've also decided to use the `/pages/_app.tsx` structure since the app is not that big.
+Initially I've decided to use the `/pages/_app.tsx` structure since the app is not that big. But since the *hiring person* told me that the *feedback* would take long due to the summer dates, I decided to transform the app to the `/app/layout.tsx` structure. To check the previous one just *roll back* a commit.
 
 Tests have been added for all the components and some of the *Helpers* and *Providers*. Since this is a *technical test*, I feel that covering the full app won't be necessary.
 

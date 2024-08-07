@@ -1,11 +1,12 @@
-import { useRouter } from 'next/router'
 import CharacterHeader from '@/components/CharacterHeader'
 import ComicList from '@/components/ComicList'
 
-const CharacterPage = () => {
-    const router = useRouter()
-    const { id } = router.query
-    const idAsNumber = Number(id)
+const CharacterPage = ({
+    params,
+}: {
+    params: { id: string }
+}) => {
+    const idAsNumber = Number(params.id)
 
     return <>
         <CharacterHeader id={idAsNumber}></CharacterHeader>

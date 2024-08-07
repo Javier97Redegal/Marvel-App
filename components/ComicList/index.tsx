@@ -1,3 +1,5 @@
+'use client'
+
 import { useQuery } from 'react-query'
 import { getComicsFromCharacter } from '@/utils/MarvelAPI'
 import ComicCard from '@/components/ComicCard'
